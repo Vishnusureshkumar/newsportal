@@ -1,0 +1,111 @@
+
+
+<div class="ticker-wrap mt-1">
+  <div class="ticker-heading">Breaking News</div>
+<div class="ticker">
+  <div class="ticker__item"> WPL 2023: 'Jess Jonassen And Marizanne Kapp Have Nerves of Steel'</div>
+  <div class="ticker__item">Pakistan interior minister says Imran Khan will be arrested tonight; PTI workers stage protests, block highways</div>
+  <div class="ticker__item">Facebook-parent Meta to lay off 10,000 employees in second round of job cuts</div>
+  <div class="ticker__item">Same-sex marriage: Oppn parties cautious, want SC to take the lead as it did on Section 377. </div>
+  <div class="ticker__item">Wins at Oscars 2023 showcase depth of diversity and inclusion in the country</div>
+
+</div>
+</div>
+
+
+
+
+
+<h2 class="hr-lines"> Latest News </h2>
+
+<div class="top-news">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-6 tn-left " *ngFor="let h of h1">
+              <div class="tn-img">
+                  <img src="{{h.image}}" style="height: 500px;"/>
+                  <div class="tn-content">
+                      <div class="tn-content-inner">
+                          <a class="tn-date" ><i class="far fa-clock"></i>{{h.date}}</a>
+                          <a class="tn-title" (click)="gotosinh('home2',h.head)">{{h.head}}</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-6 tn-right">
+              <div class="row">
+                  <div class="col-md-6" *ngFor="let h of home">
+                      <div class="tn-img" >
+                          <img src="{{h.image}}" style="height: 235px;"/>
+                          <div class="tn-content">
+                              <div class="tn-content-inner">
+                                  <a class="tn-date" ><i class="far fa-clock"></i>{{h.date}}</a>
+                                  <a class="tn-title" (click)="gotoSingle('single',h.id)">{{h.head}}</a>
+
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<h2 class="hr-lines"> Breaking News </h2>
+
+
+
+<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+
+  <div class="carousel-inner">
+    <div class="carousel-item active" *ngFor="let h of car">
+      <img src="{{h.image}}" class="d-block w-100" alt="..." style="height: 500px;" >
+      <div class="carousel-caption d-none d-md-block">
+        <h5  (click)="gotocar('car',h.head)">{{h.head}}</h5>
+\      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+<h2 class="hr-lines"> Top News </h2>
+
+  <div class="row mb-5">
+    <div class="col-md-3"  *ngFor="let a of database">
+<a (click)="gotohere('normal',a.head)">
+  <figure class="snip1493">
+    <div class="image"><img src="{{a.image}}" alt="ls-sample1" /></div>
+    <figcaption>
+      <div class="date"><span class="day">28</span><span class="month">Mar</span></div>
+      <h3 >{{a.head}}</h3>
+      <p>
+
+        {{a.description}}
+      </p>
+
+      <footer>
+        <div class="views"><i class="ion-eye"></i>2,907</div>
+        <div class="love"><i class="ion-heart"></i>623</div>
+        <div class="comments"><i class="ion-chatboxes"></i>23</div>
+      </footer>
+    </figcaption>
+  </figure>
+</a>
+</div></div>
+
